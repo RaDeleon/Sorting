@@ -9,6 +9,7 @@ def selection_sort( arr ):
         cur_index = i
         smallest_index = cur_index
         print(smallest_index)
+
         # TO-DO: find next smallest element
         # (hint, can do in 3 loc) 
         for x in range(cur_index, len(arr)):
@@ -16,21 +17,39 @@ def selection_sort( arr ):
                 smallest_index = x 
                 print(smallest_index)
         # TO-DO: swap
-        # * Swap index
         # * Take the item at the current index and move it to where the smallest item was
         current_temp = arr[smallest_index]
         # ex: 3
         # * Take smallest item and put it at the current index
         arr[smallest_index] = arr[cur_index]
         # * 
+        # * Swap index
         arr[cur_index] = current_temp
         # print(current_temp)
     return arr
 
+#Execution time: 0.004941225051879883
+
+
+#beej version
+
+# def selection_sort(l):
+#     for u in range(len(l)):
+#         min_index = u
+#         for s in range(u + 1, len(l)):
+#             if l[s] < l[min_index]:
+#                 min_index = s
+#         l[u], l[min_index] = l[min_index], l[u]
+#     return l
+
+#Execution time: 8.58306884765625e-06
+
+
+
 
 # * Added to test out alg0
-# arr1 = [1, 5, 8, 4, 2, 9, 6, 0, 3, 7]
-# selection_sort(arr1)
+arr1 = [1, 5, 8, 4, 2, 9, 6, 0, 3, 7]
+selection_sort(arr1)
  
 
 # TO-DO:  implement the Bubble Sort function below
@@ -52,13 +71,13 @@ def bubble_sort( arr ):
 
 # small test for bubz
 # arr1 = ['b','d','f','a','c','e']
-arr1 = [5,4,3,2,1]
-print(bubble_sort(arr1))
+# arr1 = [5,4,3,2,1]
+# print(bubble_sort(arr1))
 
 
-ran = range(0,len(arr1) - 1)
-for n in ran:
-    print(n)
+# ran = range(0,len(arr1) - 1)
+# for n in ran:
+#     print(n)
     
     
 
