@@ -1,3 +1,9 @@
+# Testing execution time of my algorithm
+
+import time
+start = time.time()
+
+
 # TO-DO: Complete the selection_sort() function below 
 def selection_sort( arr ):
     # loop through n-1 elements
@@ -38,22 +44,29 @@ def bubble_sort( arr ):
         for j in range(0, len(arr) - 1 - i):
            # * shows me what i and j is while running l337 h4x0rz alg0
             print(arr[i],arr[j])
-           # * if 
+           # * if arr[5] > arr[4+1]
             if arr[j] > arr[j+1]:
-            # *     
+            # * if so Sw@p
              print(arr)
              arr[j], arr[j+1] = arr[j+1], arr[j]
     return arr
 
 
 # small test for bubz
-arr1 = ['b','d','f','a','c','e']
+# arr1 = ['b','d','f','a','c','e']
 arr1 = [5,4,3,2,1]
 print(bubble_sort(arr1))
 
 
+ran = range(0,len(arr1) - 1)
+for n in ran:
+    print(n)
+    
+    
 
 
+end = time.time()
+print(end - start)
 
 
 # STRETCH: implement the Count Sort function below
