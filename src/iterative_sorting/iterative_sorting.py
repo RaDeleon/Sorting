@@ -1,8 +1,6 @@
 # Testing execution time of my algorithm
-
 import time
 start = time.time()
-
 
 # TO-DO: Complete the selection_sort() function below 
 def selection_sort( arr ):
