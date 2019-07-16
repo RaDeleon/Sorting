@@ -70,9 +70,9 @@ def bubble_sort( arr ):
 
 
 # small test for bubz
-# arr1 = ['b','d','f','a','c','e']
-# arr1 = [5,4,3,2,1]
-# print(bubble_sort(arr1))
+arr1 = ['b','d','f','a','c','e']
+arr1 = [5,4,3,2,1]
+print(bubble_sort(arr1))
 
 
 # ran = range(0,len(arr1) - 1)
