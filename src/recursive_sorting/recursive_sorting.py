@@ -1,3 +1,8 @@
+import time
+start = time.time()
+
+
+
 # TO-DO: complete the helpe function below to merge 2 sorted arrays
 def merge( arrA, arrB ):
     elements = len( arrA ) + len( arrB )
@@ -14,6 +19,7 @@ def merge_sort( arr ):
     return arr
 
 
+
 # STRETCH: implement an in-place merge sort algorithm
 def merge_in_place(arr, start, mid, end):
     # TO-DO
@@ -24,6 +30,13 @@ def merge_sort_in_place(arr, l, r):
     # TO-DO
 
     return arr
+
+
+
+
+end = time.time() 
+print(end - start) 
+
 
 
 # STRETCH: implement the Timsort function below
