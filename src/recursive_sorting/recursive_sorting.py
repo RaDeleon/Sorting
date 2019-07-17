@@ -8,7 +8,10 @@ def merge( arrA, arrB ):
     elements = len( arrA ) + len( arrB )
     merged_arr = [0] * elements
  #Arrays already sorted! no need < JK!
-  # merged_arr = list(set(arrA + arrB))
+ # Using list and sort works but removes all duplicates and in this case we want all those
+ # but just sorted
+
+ # merged_arr = list(set(arrA + arrB))
     i = 0
     j = 0
     idx = 0
@@ -22,11 +25,11 @@ def merge( arrA, arrB ):
             j += 1
         idx += 1
     while i < len(arrA):
-        merged_arr[index] = arrA[i]
+        merged_arr[idx] = arrA[i]
         i += 1
         index += 1
     while j < len(arrB):
-        merged_arr[index] = arrB[j]
+        merged_arr[idx] = arrB[j]
         j += 1
         idx += 1
 
@@ -45,12 +48,12 @@ merge(arr1,arr2)
 def merge_sort( arr ):
     # TO-DO
     # if greater than 1 lets split it otherwise no need to merge and sort 1 value
-    if len(arr) > 1:
-        # return arr
+    if len(arr) < 2:
+        return arr
         #split into individual arr?
         # split into 2 arr and sort
-        else:
-            middle = int(len(arr) //2) #pivor?  
+    else:
+            middle = int(len(arr) //2) #pivot?  
             left_arr = merge_sort(arr[:middle])
             right_arr = merge_sort(arr[middle:])
         # merge into arr of 2 and with smallest of the 2 num first
