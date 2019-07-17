@@ -20,7 +20,7 @@ def merge( arrA, arrB ):
         else:
             merged_arr[idx] =  arrB[j]
             j += 1
-        index += 1
+        idx += 1
     while i < len(arrA):
         merged_arr[index] = arrA[i]
         i += 1
@@ -28,7 +28,7 @@ def merge( arrA, arrB ):
     while j < len(arrB):
         merged_arr[index] = arrB[j]
         j += 1
-        index += 1
+        idx += 1
 
  
     print(merged_arr)
