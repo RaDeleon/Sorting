@@ -27,14 +27,14 @@ def merge( arrA, arrB ):
     while i < len(arrA):
         merged_arr[idx] = arrA[i]
         i += 1
-        index += 1
+        idx += 1
     while j < len(arrB):
         merged_arr[idx] = arrB[j]
         j += 1
         idx += 1
 
  
-    print(merged_arr)
+    # print(merged_arr)
 
     return merged_arr
 
@@ -57,7 +57,7 @@ def merge_sort( arr ):
             left_arr = merge_sort(arr[:middle])
             right_arr = merge_sort(arr[middle:])
         # merge into arr of 2 and with smallest of the 2 num first
-            return merge(left,right)
+            return merge(left_arr,right_arr)
 
     return arr
 
